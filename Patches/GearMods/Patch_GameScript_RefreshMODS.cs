@@ -18,8 +18,8 @@ namespace MeleeRangePlus.Patches.GearMods
             for (int i = 0; i < 25; i++)
             {
                 GameScript.MODS[i] = 0;
-                MeleeRangePlus.CurrentGearModCount = 0;
             }
+            MeleeRangePlus.CurrentGearModCount = 0;
             for (int i = 36; i < 42; i++) // equipped gear
             {
                 if (___inventory[i].id > 0) // there's an item equipped
@@ -31,7 +31,7 @@ namespace MeleeRangePlus.Patches.GearMods
                             if (ItemRegistry.Singleton.TryGetEntry(___inventory[i].aspect[j], out ItemInfo itemInfo))
                             {
                                 if (itemInfo == MeleeRangePlus.GearModItem)
-                                    MeleeRangePlus.CurrentGearModCount += 1;
+                                    MeleeRangePlus.CurrentGearModCount += ___inventory[i].aspectLvl[j];
                             }
                             else
                             {

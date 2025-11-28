@@ -17,7 +17,7 @@ namespace MeleeRangePlus.Patches
         public static void Prefix()
         {
             MeleeRangePlus.GetReferencesAndApplyGearMods();
-            float scaleBonus = MeleeRangePlus.CurrentGearModCount * 0.2f;
+            float scaleBonus = MeleeRangePlus.CurrentGearModCount * 0.04f;
             MeleeRangePlus.HeldAppearanceParent.localScale = Vector3.one * (1f + scaleBonus);
             MeleeRangePlus.HeldAppearanceParent.transform.localPosition = new Vector3(0f, 0f, 0f);// + Vector3.down * 0.35f * scaleBonus;
         }

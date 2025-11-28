@@ -90,7 +90,7 @@ namespace MeleeRangePlus
             }
 
             // each gear mod adds a percentage to each melee hitbox's base size
-            float scaleMultiplier = 1f + CurrentGearModCount * 0.2f;
+            float scaleMultiplier = 1f + CurrentGearModCount * 0.04f;
             player.attackCube.transform.localScale = attackCube1BaseSize * scaleMultiplier;
             player.attackCube2.transform.localScale = attackCube2BaseSize * scaleMultiplier;
             player.attackCube3.transform.localScale = attackCube3BaseSize * scaleMultiplier;
